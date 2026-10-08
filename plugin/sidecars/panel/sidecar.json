@@ -1,0 +1,20 @@
+{
+  "command": "node",
+  "args": [
+    "main.mjs"
+  ],
+  "restart_policy": "always",
+  "display_name": "Antigravity Sidecar",
+  "description": "Interactive Sidecar Workshop",
+  "has_web_ui": true,
+  "ui_config": {
+    "display_name": "Antigravity Sidecar",
+    "views": [
+      {
+        "path": "/",
+        "entrypoint": "SIDECAR_UI_ENTRYPOINT_AUX_PANE",
+        "title": "Workshop"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "modes": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "hero_items": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}
