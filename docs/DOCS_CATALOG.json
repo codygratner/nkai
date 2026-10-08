@@ -1,0 +1,9 @@
+{
+  "catalog": {
+    "SYSTEM_MAP.md": "Architectural map (Standalone HTML Canvas <-> UI Extension Bundle <-> Sidecar Node SDK).",
+    "ARCHITECTURE.md": "Deep architectural dive into the Asymmetric Sidecar Split",
+    "API_REFERENCE.md": "Complete reference of schema.json, DOM events, and Web Worker communication contracts.",
+    "GLOSSARY.md": "Key terms (Hero Stage, Category Tabs, Context Scroll, FAB, Composer, Verdicts).",
+    "history/DEV_HISTORY.md": "Milestone journal"
+  }
+}
