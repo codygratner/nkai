@@ -388,6 +388,14 @@
           <span>3.2 Magnetic Detents</span>
           <span class="badge" id="badge-3.2">PENDING</span>
         </div>
+        <div class="nav-item" id="nav-item-4.1" onclick="showHeroItem('4.1')">
+          <span>4.1 Mod Dock &amp; Splines</span>
+          <span class="badge" id="badge-4.1">PENDING</span>
+        </div>
+        <div class="nav-item" id="nav-item-4.2" onclick="showHeroItem('4.2')">
+          <span>4.2 Flip Cards &amp; Play Mode</span>
+          <span class="badge" id="badge-4.2">PENDING</span>
+        </div>
       </div>
 
       <div class="main-content">
@@ -1016,25 +1024,125 @@
     
 
         </div>
-      </div>
+      
+        <!-- HERO STAGE 4.1 -->
+        <div class="hero-stage-panel hidden themed-card rounded-2xl p-6 space-y-6 border border-[#06b6d4]/40 bg-[#081520] shadow-2xl" id="hero-stage-4.1">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-[#155e75] pb-4">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="text-xs px-2.5 py-0.5 rounded bg-[#0e3b43] text-[#38bdf8] font-mono-code font-bold">ITEM 4.1 &bull; MOD DOCK &amp; SPLINES</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-[#059669]/20 text-[#34d399] font-mono-code font-bold border border-[#059669]/30">RECOMMENDED</span>
+              </div>
+              <h3 class="text-lg font-bold text-white">Persistent Lower Modulator Dock Strip &amp; Tracer Splines</h3>
+            </div>
+            <button onclick="handleFabClick()" class="px-3 py-1.5 rounded-lg bg-[#0c2438] hover:bg-[#153e5e] text-[#7dd3fc] border border-[#0284c7]/40 text-xs font-mono-code font-bold transition flex items-center gap-1.5">
+              <span>🔍 See in Context (Layouts)</span>
+            </button>
+          </div>
+
+          <p class="text-xs text-[#94a3b8] leading-relaxed">
+            Persistent 16-tile dock strip (<code class="text-[#38bdf8]">bounds.removeFromBottom(120)</code>) hosting animated LFO, Env, and Macro tiles with glowing multi-bloom Bézier tracer splines connecting tiles to target sliders. Features static background image caching (0.1% CPU), VBlank display refresh sync, and strict dirty-rect cable bounding union invalidation.
+          </p>
+
+          <!-- Mini preview -->
+          <div class="p-4 bg-[#031017] rounded-xl border border-[#155e75] space-y-2">
+            <div class="text-xs font-mono-code text-[#22d3ee] font-bold">🎛️ Modulator Dock Strip Preview (16 Tiles)</div>
+            <div class="grid grid-cols-4 md:grid-cols-8 gap-2">
+              <div class="p-2 bg-[#092230] rounded border border-[#0891b2] text-center"><div class="text-[10px] font-bold text-[#22d3ee]">LFO 1</div><div class="text-[9px] text-[#64748b]">~ SIN</div></div>
+              <div class="p-2 bg-[#092230] rounded border border-[#0891b2] text-center"><div class="text-[10px] font-bold text-[#22d3ee]">LFO 2</div><div class="text-[9px] text-[#64748b]">/\ TRI</div></div>
+              <div class="p-2 bg-[#092230] rounded border border-[#0891b2] text-center"><div class="text-[10px] font-bold text-[#fbbf24]">ENV 1</div><div class="text-[9px] text-[#64748b]">/\_ EXP</div></div>
+              <div class="p-2 bg-[#092230] rounded border border-[#0891b2] text-center"><div class="text-[10px] font-bold text-[#fbbf24]">ENV 2</div><div class="text-[9px] text-[#64748b]">/-- LIN</div></div>
+              <div class="p-2 bg-[#092230] rounded border border-[#0891b2] text-center"><div class="text-[10px] font-bold text-[#c084fc]">RND 1</div><div class="text-[9px] text-[#64748b]">S&amp;H</div></div>
+              <div class="p-2 bg-[#092230] rounded border border-[#0891b2] text-center"><div class="text-[10px] font-bold text-[#c084fc]">RND 2</div><div class="text-[9px] text-[#64748b]">DRIFT</div></div>
+              <div class="p-2 bg-[#092230] rounded border border-[#a855f7] text-center"><div class="text-[10px] font-bold text-[#f472b6]">MACRO 1</div><div class="text-[9px] text-[#64748b]">BITE</div></div>
+              <div class="p-2 bg-[#092230] rounded border border-[#a855f7] text-center"><div class="text-[10px] font-bold text-[#f472b6]">MACRO 2</div><div class="text-[9px] text-[#64748b]">SLAM</div></div>
+            </div>
+          </div>
+
+          <!-- Options -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div id="card-4.1-APPROVE" onclick="setVerdict('4.1', 'APPROVE', 'Adopt persistent 16-tile dock strip and glowing Bezier tracer splines with dirty-rect invalidation.')" class="p-4 rounded-xl border border-[#059669]/40 bg-[#064e3b]/20 hover:bg-[#064e3b]/30 cursor-pointer transition space-y-2">
+              <div class="flex items-center justify-between"><span class="font-bold text-sm text-[#34d399]">✅ APPROVE</span><span class="text-[10px] font-mono-code px-1.5 py-0.5 rounded bg-[#059669]/30 text-[#a7f3d0]">PROD v0.4.1</span></div>
+              <p class="text-[11px] text-[#94a3b8] leading-relaxed">Persistent lower dock strip with dirty-rect tracer splines and VBlank refresh.</p>
+            </div>
+            <div id="card-4.1-TABLE" onclick="setVerdict('4.1', 'TABLE', 'Table lower dock strip to v0.5.0, keep existing modulation matrix popup in v0.4.1.')" class="p-4 rounded-xl border border-[#d97706]/40 bg-[#78350f]/20 hover:bg-[#78350f]/30 cursor-pointer transition space-y-2">
+              <div class="flex items-center justify-between"><span class="font-bold text-sm text-[#fbbf24]">⏳ TABLE</span><span class="text-[10px] font-mono-code px-1.5 py-0.5 rounded bg-[#d97706]/30 text-[#fde68a]">FUTURE R&amp;D</span></div>
+              <p class="text-[11px] text-[#94a3b8] leading-relaxed">Keep floating modulation popover for v0.4.1; defer persistent dock to v0.5.0.</p>
+            </div>
+            <div id="card-4.1-KILL" onclick="setVerdict('4.1', 'KILL', 'Reject visual tracer cables to avoid any UI clutter.')" class="p-4 rounded-xl border border-[#dc2626]/40 bg-[#7f1d1d]/20 hover:bg-[#7f1d1d]/30 cursor-pointer transition space-y-2">
+              <div class="flex items-center justify-between"><span class="font-bold text-sm text-[#f87171]">💀 KILL</span><span class="text-[10px] font-mono-code px-1.5 py-0.5 rounded bg-[#dc2626]/30 text-[#fecaca]">GRAVEYARD</span></div>
+              <p class="text-[11px] text-[#94a3b8] leading-relaxed">Reject visual tracer cables; rely solely on tabular mod matrix rows.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO STAGE 4.2 -->
+        <div class="hero-stage-panel hidden themed-card rounded-2xl p-6 space-y-6 border border-[#ec4899]/40 bg-[#1a0815] shadow-2xl" id="hero-stage-4.2">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-[#831843] pb-4">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="text-xs px-2.5 py-0.5 rounded bg-[#500724] text-[#fbcfe8] font-mono-code font-bold">ITEM 4.2 &bull; FLIP CARDS &amp; PLAY MODE</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-[#059669]/20 text-[#34d399] font-mono-code font-bold border border-[#059669]/30">RECOMMENDED</span>
+              </div>
+              <h3 class="text-lg font-bold text-white">Alt+Click Flip Card Parameter Injection &amp; Giant Macro Play Mode</h3>
+            </div>
+            <button onclick="handleFabClick()" class="px-3 py-1.5 rounded-lg bg-[#3b0d26] hover:bg-[#521336] text-[#f472b6] border border-[#db2777]/40 text-xs font-mono-code font-bold transition flex items-center gap-1.5">
+              <span>🔍 See in Context (Layouts)</span>
+            </button>
+          </div>
+
+          <p class="text-xs text-[#94a3b8] leading-relaxed">
+            Holding <kbd class="px-1.5 py-0.5 bg-[#4c0519] border border-[#be123c] rounded text-[10px] font-mono-code text-white">Alt</kbd> and clicking any parameter morphs the card into a 4-fader Modulation Injection Bay in 120 ms using <code class="text-[#f472b6]">juce::ComponentAnimator</code>. Decoupled UI state preserves APVTS bindings without polluting DAW recall. One-click Live Stage Play Mode exposes giant macro dials for stage visibility.
+          </p>
+
+          <!-- Interactive simulator -->
+          <div class="p-4 bg-[#140510] rounded-xl border border-[#9d174d] space-y-3">
+            <div class="flex items-center justify-between text-xs font-mono-code">
+              <span class="text-[#f472b6] font-bold">🧪 Interactive Flip Card Test</span>
+              <span id="flip-card-status-stage" class="text-[#cbd5e1]">View: <strong>[ Main Synthesis Parameters ]</strong></span>
+            </div>
+            <button type="button" onclick="testFlipCard()" class="px-4 py-2 bg-[#be185d] hover:bg-[#db2777] text-white font-bold rounded-lg text-xs transition-colors shadow-lg">
+              🔄 Simulate Alt+Click on CUTOFF
+            </button>
+          </div>
+
+          <!-- Options -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div id="card-4.2-APPROVE" onclick="setVerdict('4.2', 'APPROVE', 'Adopt Alt+Click card flip for per-parameter modulation injection and giant macro play mode.')" class="p-4 rounded-xl border border-[#059669]/40 bg-[#064e3b]/20 hover:bg-[#064e3b]/30 cursor-pointer transition space-y-2">
+              <div class="flex items-center justify-between"><span class="font-bold text-sm text-[#34d399]">✅ APPROVE</span><span class="text-[10px] font-mono-code px-1.5 py-0.5 rounded bg-[#059669]/30 text-[#a7f3d0]">PROD v0.4.1</span></div>
+              <p class="text-[11px] text-[#94a3b8] leading-relaxed">Alt+Click flip card for immediate parameter modulation injection + giant macro live mode.</p>
+            </div>
+            <div id="card-4.2-TABLE" onclick="setVerdict('4.2', 'TABLE', 'Keep standard drag-and-drop assignment without card morphing animation.')" class="p-4 rounded-xl border border-[#d97706]/40 bg-[#78350f]/20 hover:bg-[#78350f]/30 cursor-pointer transition space-y-2">
+              <div class="flex items-center justify-between"><span class="font-bold text-sm text-[#fbbf24]">⏳ TABLE</span><span class="text-[10px] font-mono-code px-1.5 py-0.5 rounded bg-[#d97706]/30 text-[#fde68a]">FUTURE R&amp;D</span></div>
+              <p class="text-[11px] text-[#94a3b8] leading-relaxed">Keep standard drag-and-drop; table 3D flip card animations for a later milestone.</p>
+            </div>
+            <div id="card-4.2-KILL" onclick="setVerdict('4.2', 'KILL', 'Reject card flipping to prevent UI disorientation.')" class="p-4 rounded-xl border border-[#dc2626]/40 bg-[#7f1d1d]/20 hover:bg-[#7f1d1d]/30 cursor-pointer transition space-y-2">
+              <div class="flex items-center justify-between"><span class="font-bold text-sm text-[#f87171]">💀 KILL</span><span class="text-[10px] font-mono-code px-1.5 py-0.5 rounded bg-[#dc2626]/30 text-[#fecaca]">GRAVEYARD</span></div>
+              <p class="text-[11px] text-[#94a3b8] leading-relaxed">Reject card flipping entirely; static cards only.</p>
+            </div>
+          </div>
+        </div>
+
+        </div>
     
 
     <!-- ================= MODE 2: LAYOUT TOPOLOGIES ================= -->
 
-<div class="mode-wrapper" id="layouts-mode">
+    <div class="mode-wrapper" id="layouts-mode">
       <div class="sidebar">
         <h2 style="color: var(--accent-pink);">Layout Topologies</h2>
         <div class="nav-item active" onclick="showSection('layouts', 'sec-monolithic')">1. Monolithic Faceplate</div>
-        <div class="nav-item" onclick="showSection('layouts', 'sec-traces')">2. Flow Traces &amp; Gutters</div>
-        <div class="nav-item" onclick="showSection('layouts', 'sec-glyphs')">3. TE Vector Glyphs</div>
-        <div class="nav-item" onclick="showSection('layouts', 'sec-faders')">4. Rhythm Fader Strip</div>
-        <div class="nav-item" onclick="showSection('layouts', 'sec-blueprint')">5. C++ Architecture Blueprint</div>
+        <div class="nav-item" onclick="showSection('layouts', 'sec-hybrid-banking')">2. Hybrid 6-8 Banking</div>
+        <div class="nav-item" onclick="showSection('layouts', 'sec-traces')">3. Flow Traces &amp; Gutters</div>
+        <div class="nav-item" onclick="showSection('layouts', 'sec-glyphs')">4. TE Vector Glyphs</div>
+        <div class="nav-item" onclick="showSection('layouts', 'sec-faders')">5. Rhythm Fader Strip</div>
+        <div class="nav-item" onclick="showSection('layouts', 'sec-blueprint')">6. C++ Architecture Blueprint</div>
+        <div class="nav-item" onclick="showSection('layouts', 'sec-mod-dock')">7. Modulator Dock Strip</div>
+        <div class="nav-item" onclick="showSection('layouts', 'sec-flip-cards')">8. Flip Cards &amp; Play Mode</div>
       </div>
       <div class="main-content">
-        <div class="section active" id="sec-monolithic">
-          
-      
-      <!-- Overview Card -->
+<div class="section active" id="sec-monolithic">
+<!-- Overview Card -->
       <div class="themed-card rounded-xl p-5 space-y-3 border-l-4 border-l-[#a855f7]">
         <div class="flex items-center justify-between">
           <h2 class="text-base font-bold text-white flex items-center gap-2">
@@ -1518,7 +1626,12 @@
             <li><strong>Effects &amp; Mod Pages:</strong> Continue using <code class="text-white">ModuleCardComponent</code> with <code class="text-[#93c5fd]">juce::DragAndDropContainer</code>, providing reorderable slots and drop targets.</li>
             <li><strong>TBD-16 Hardware Parity:</strong> 100% preserved! The embedded OLED firmware still addresses blocks in 4-parameter pages. Only the desktop rendering surface evolves from "floating cards" to an "integrated instrument console."</li>
           </ul>
-        <!-- Mission 1 Findings: The Hybrid Hardware/Software Banking Architecture -->
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sec-hybrid-banking">
+<!-- Mission 1 Findings: The Hybrid Hardware/Software Banking Architecture -->
         <div class="themed-card rounded-xl p-5 space-y-4 border-l-4 border-l-[#10b981] bg-[#0c161c]">
           <div class="flex items-center justify-between">
             <div>
@@ -1600,8 +1713,11 @@
               </p>
             </div>
           </div>
-        <!-- Mission 2 Findings: Monolithic Sculpted Faceplates & Flow Traces -->
-        <div class="themed-card rounded-xl p-5 space-y-4 border-l-4 border-l-[#38bdf8] bg-[#0c131d]" id="sec-traces">
+</div>
+</div>
+<div class="section" id="sec-traces">
+<!-- Mission 2 Findings: Monolithic Sculpted Faceplates & Flow Traces -->
+        <div class="themed-card rounded-xl p-5 space-y-4 border-l-4 border-l-[#38bdf8] bg-[#0c131d]" >
           <div class="flex items-center justify-between">
             <div>
               <h3 class="text-base font-bold text-white flex items-center gap-2">
@@ -1663,8 +1779,11 @@
               </div>
             </div>
           </div>
-        <!-- Mission 3 Findings: Teenage Engineering Game Feel & Vertical Arcade Faders -->
-        <div class="themed-card rounded-xl p-5 space-y-4 border-l-4 border-l-[#f59e0b] bg-[#14120e]" id="sec-glyphs">
+</div>
+</div>
+<div class="section" id="sec-glyphs">
+<!-- Mission 3 Findings: Teenage Engineering Game Feel & Vertical Arcade Faders -->
+        <div class="themed-card rounded-xl p-5 space-y-4 border-l-4 border-l-[#f59e0b] bg-[#14120e]" >
           <div class="flex items-center justify-between">
             <div>
               <h3 class="text-base font-bold text-white flex items-center gap-2">
@@ -1745,8 +1864,10 @@
               When dragging near musical intervals (semitones, octave ratios), a $\pm 1.8\%$ capture zone with 4px breakaway force magnetically snaps into place with a 1-frame cyan glow pulse, a high-contrast HUD flash (<code class="text-white">Ratio: [ 2.000x ]</code>), and a 1-pixel damped elastic settle bounce.
             </p>
           </div>
-
-        <!-- Mission 4 Capstone: Master C++ Architectural Blueprint & Data Schema -->
+</div>
+</div>
+<div class="section" id="sec-blueprint">
+<!-- Mission 4 Capstone: Master C++ Architectural Blueprint & Data Schema -->
         <div class="themed-card rounded-xl p-5 space-y-5 border-l-4 border-l-[#8b5cf6] bg-[#100d1e]" id="sec-blueprint">
           <div class="flex items-center justify-between">
             <div>
@@ -1873,23 +1994,210 @@
                 <li><strong class="text-white">Zero Heap Allocations:</strong> <code class="text-[#d8b4fe]">SystemStats::getNumAllocations()</code> asserts 0 allocations over 30 timer iterations.</li>
               </ul>
             </div>
-
           </div>
-
         </div>
-      </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
+        <!-- Section 7: Control Surfaces - Modulator Dock Strip & Tracer Splines -->
+        <div class="section" id="sec-mod-dock">
+          <div class="themed-card rounded-xl p-5 space-y-4 border-l-4 border-l-[#06b6d4] bg-[#081520]">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                  🎛️ Section 7: Persistent Lower Modulator Dock Strip &amp; Tracer Splines
+                </h3>
+                <p class="text-xs text-[#94a3b8] mt-1">
+                  Milestone v0.4.1 Presentation Layer Architecture &bull; Phase Plant / Vital / Bitwig Benchmarks
+                </p>
+              </div>
+              <span class="text-xs px-2.5 py-0.5 rounded bg-[#164e63] text-[#67e8f9] font-mono-code font-bold">CONTROL SURFACE RESEARCH</span>
+            </div>
 
+            <!-- Architectural Blueprint Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+              
+              <div class="p-4 bg-[#0c202d] rounded-lg border border-[#155e75] space-y-2">
+                <div class="font-bold text-[#38bdf8] flex items-center gap-2 text-sm">
+                  <span>1. ModulatorDock Strip Component</span>
+                  <span class="text-[10px] font-mono-code px-1.5 py-0.5 bg-[#083344] text-[#38bdf8] rounded">Phase Plant Paradigm</span>
+                </div>
+                <p class="text-[#cbd5e1] leading-relaxed">
+                  Anchored persistently to the bottom of the main plugin window via <code class="text-[#7dd3fc]">bounds.removeFromBottom(120)</code>. Manages a responsive flex grid hosting up to <strong>16 compact <code class="text-[#7dd3fc]">ModulatorTile</code> components</strong> (LFOs, Complex Envelopes, Multi-stage Curves, Performance Macros).
+                </p>
+                <ul class="list-disc pl-4 space-y-1 text-[#94a3b8] text-[11px]">
+                  <li><strong class="text-white">Static vs. Dynamic Separation:</strong> Tile splits into <code class="text-[#7dd3fc]">StaticBackground</code> (borders, labels) and <code class="text-[#7dd3fc]">DynamicScope</code> (animated wavetable/LFO shape).</li>
+                  <li><strong class="text-white">Chassis Image Caching:</strong> Static elements call <code class="text-[#7dd3fc]">setBufferedToImage(true)</code>, reducing CPU repaint load to 0.1%.</li>
+                  <li><strong class="text-white">VBlank Display Sync:</strong> Dynamic scopes hook into JUCE 9's <code class="text-[#7dd3fc]">juce::VBlankAttachment</code> to sync redraws directly to monitor refresh rates (60/120/144 Hz) with zero tearing.</li>
+                </ul>
+              </div>
+
+              <div class="p-4 bg-[#0c202d] rounded-lg border border-[#155e75] space-y-2">
+                <div class="font-bold text-[#67e8f9] flex items-center gap-2 text-sm">
+                  <span>2. Visual Modulation Tracer Splines</span>
+                  <span class="text-[10px] font-mono-code px-1.5 py-0.5 bg-[#083344] text-[#67e8f9] rounded">Bitwig / 0-Coast Style</span>
+                </div>
+                <p class="text-[#cbd5e1] leading-relaxed">
+                  Glowing dynamic Bézier tracer cables interconnect bottom dock tiles to arbitrary target sliders across the faceplate.
+                </p>
+                <ul class="list-disc pl-4 space-y-1 text-[#94a3b8] text-[11px]">
+                  <li><strong class="text-white">Full-Window Transparent Overlay:</strong> Sized to the full plugin bounds, placed at the highest Z-order. Calls <code class="text-[#7dd3fc]">setInterceptsMouseClicks(false, false)</code> to never impede underlying controls.</li>
+                  <li><strong class="text-white">Strict Dirty-Rect Gutter Routing:</strong> Never calls full <code class="text-[#f43f5e]">repaint()</code>. Calculates bounding union of old vs new spline frames: <code class="text-[#7dd3fc]">repaint(oldBounds.getUnion(newBounds).expanded(padding))</code>.</li>
+                  <li><strong class="text-white">Zero-Allocation Multi-Bloom:</strong> Avoids expensive drop-shadow filters. Strokes the pre-allocated cubic Bézier path 3 times: wide 20% alpha outer aura, medium 50% glow, and crisp 1px solid core.</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Modulator Dock Visual Simulator -->
+            <div class="p-4 bg-[#061822] rounded-xl border border-[#0e7490] space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono-code">
+                <span class="text-[#22d3ee] font-bold">🧪 Modulator Dock &amp; Tracer Cable Preview</span>
+                <span class="text-[#94a3b8]">Live JUCE Component Mockup</span>
+              </div>
+              
+              <!-- Dock preview bar -->
+              <div class="grid grid-cols-4 md:grid-cols-8 gap-2 p-2 bg-[#031017] rounded-lg border border-[#155e75]">
+                <div class="p-2 bg-[#092230] rounded border border-[#0891b2] text-center space-y-1 cursor-pointer hover:border-[#22d3ee] transition-colors">
+                  <div class="text-[10px] font-bold text-[#22d3ee]">LFO 1</div>
+                  <div class="h-6 bg-[#04131c] rounded flex items-center justify-center text-[10px] text-[#38bdf8] font-mono-code">~ SIN</div>
+                  <div class="text-[9px] text-[#64748b]">1/4 Sync</div>
+                </div>
+                <div class="p-2 bg-[#092230] rounded border border-[#0891b2] text-center space-y-1 cursor-pointer hover:border-[#22d3ee] transition-colors">
+                  <div class="text-[10px] font-bold text-[#22d3ee]">LFO 2</div>
+                  <div class="h-6 bg-[#04131c] rounded flex items-center justify-center text-[10px] text-[#38bdf8] font-mono-code">/\ TRI</div>
+                  <div class="text-[9px] text-[#64748b]">1/8 Dot</div>
+                </div>
+                <div class="p-2 bg-[#092230] rounded border border-[#0891b2] text-center space-y-1 cursor-pointer hover:border-[#22d3ee] transition-colors">
+                  <div class="text-[10px] font-bold text-[#fbbf24]">ENV 1</div>
+                  <div class="h-6 bg-[#04131c] rounded flex items-center justify-center text-[10px] text-[#fde68a] font-mono-code">/\_ EXP</div>
+                  <div class="text-[9px] text-[#64748b]">A/D Snappy</div>
+                </div>
+                <div class="p-2 bg-[#092230] rounded border border-[#0891b2] text-center space-y-1 cursor-pointer hover:border-[#22d3ee] transition-colors">
+                  <div class="text-[10px] font-bold text-[#fbbf24]">ENV 2</div>
+                  <div class="h-6 bg-[#04131c] rounded flex items-center justify-center text-[10px] text-[#fde68a] font-mono-code">/-- LIN</div>
+                  <div class="text-[9px] text-[#64748b]">Mod Decay</div>
+                </div>
+                <div class="p-2 bg-[#092230] rounded border border-[#0891b2] text-center space-y-1 cursor-pointer hover:border-[#22d3ee] transition-colors">
+                  <div class="text-[10px] font-bold text-[#c084fc]">RND 1</div>
+                  <div class="h-6 bg-[#04131c] rounded flex items-center justify-center text-[10px] text-[#d8b4fe] font-mono-code">S&amp;H</div>
+                  <div class="text-[9px] text-[#64748b]">Turing LFSR</div>
+                </div>
+                <div class="p-2 bg-[#092230] rounded border border-[#0891b2] text-center space-y-1 cursor-pointer hover:border-[#22d3ee] transition-colors">
+                  <div class="text-[10px] font-bold text-[#c084fc]">RND 2</div>
+                  <div class="h-6 bg-[#04131c] rounded flex items-center justify-center text-[10px] text-[#d8b4fe] font-mono-code">DRIFT</div>
+                  <div class="text-[9px] text-[#64748b]">Brownian</div>
+                </div>
+                <div class="p-2 bg-[#092230] rounded border border-[#a855f7] text-center space-y-1 cursor-pointer hover:border-[#c084fc] transition-colors">
+                  <div class="text-[10px] font-bold text-[#f472b6]">MACRO 1</div>
+                  <div class="h-6 bg-[#04131c] rounded flex items-center justify-center text-[10px] text-[#f472b6] font-mono-code">M1: BITE</div>
+                  <div class="text-[9px] text-[#64748b]">0.0 &rarr; 1.0</div>
+                </div>
+                <div class="p-2 bg-[#092230] rounded border border-[#a855f7] text-center space-y-1 cursor-pointer hover:border-[#c084fc] transition-colors">
+                  <div class="text-[10px] font-bold text-[#f472b6]">MACRO 2</div>
+                  <div class="h-6 bg-[#04131c] rounded flex items-center justify-center text-[10px] text-[#f472b6] font-mono-code">M2: SLAM</div>
+                  <div class="text-[9px] text-[#64748b]">0.0 &rarr; 1.0</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
+
+
+        <!-- Section 8: Control Surfaces - Alt+Click Flip Cards & Play Mode -->
+        <div class="section" id="sec-flip-cards">
+          <div class="themed-card rounded-xl p-5 space-y-4 border-l-4 border-l-[#ec4899] bg-[#1a0815]">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                  🎴 Section 8: Alt+Click Flip Card Micro-Interactions &amp; Giant Macro Play Mode
+                </h3>
+                <p class="text-xs text-[#94a3b8] mt-1">
+                  Instant Parameter Modulation Injection &bull; Valhalla / Pigments Live Stage Ergonomics
+                </p>
+              </div>
+              <span class="text-xs px-2.5 py-0.5 rounded bg-[#701a75] text-[#f472b6] font-mono-code font-bold">MICRO-INTERACTIONS</span>
+            </div>
+
+            <!-- Dual Columns: Flip Cards vs Giant Play Mode -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+              
+              <div class="p-4 bg-[#260e20] rounded-lg border border-[#831843] space-y-2">
+                <div class="font-bold text-[#f472b6] flex items-center gap-2 text-sm">
+                  <span>1. Alt+Click Flip Card Parameter Injection</span>
+                  <span class="text-[10px] font-mono-code px-1.5 py-0.5 bg-[#500724] text-[#fbcfe8] rounded">Ableton / Pigments Style</span>
+                </div>
+                <p class="text-[#cbd5e1] leading-relaxed">
+                  Clicking any parameter knob or slider while holding <kbd class="px-1.5 py-0.5 bg-[#4c0519] border border-[#be123c] rounded text-[10px] font-mono-code text-white">Alt</kbd> morphs the parent module card into a <strong>4-fader Modulation Injection Bay</strong> dedicated strictly to that parameter.
+                </p>
+                <ul class="list-disc pl-4 space-y-1 text-[#94a3b8] text-[11px]">
+                  <li><strong class="text-white">Clean View-State Decoupling:</strong> Card state stored in local UI atomic <code class="text-[#f472b6]">enum class CardState { MainView, ModView }</code>. Zero pollution of APVTS or DAW automation recall.</li>
+                  <li><strong class="text-white">Lightweight 3D Flip:</strong> <code class="text-[#f472b6]">juce::ComponentAnimator</code> animates component width to 0, swaps visibility, and expands back in 120 ms. Zero OpenGL or GPU overhead.</li>
+                  <li><strong class="text-white">Persistent APVTS Bindings:</strong> Setting inactive view <code class="text-[#f472b6]">setVisible(false)</code> removes paint/mouse overhead while preserving underlying APVTS slider attachments 100%.</li>
+                </ul>
+              </div>
+
+              <div class="p-4 bg-[#260e20] rounded-lg border border-[#831843] space-y-2">
+                <div class="font-bold text-[#fb7185] flex items-center gap-2 text-sm">
+                  <span>2. Giant Macro "Play Mode" Live Surface</span>
+                  <span class="text-[10px] font-mono-code px-1.5 py-0.5 bg-[#500724] text-[#fbcfe8] rounded">Valhalla Live Ergonomics</span>
+                </div>
+                <p class="text-[#cbd5e1] leading-relaxed">
+                  One-click live stage mode toggling a full-screen overlay with <strong>4 to 8 massive macro dials</strong> for stage performances and dark-venue visibility.
+                </p>
+                <ul class="list-disc pl-4 space-y-1 text-[#94a3b8] text-[11px]">
+                  <li><strong class="text-white">Responsive Scaled Typography:</strong> Dynamic font sizing (<code class="text-[#f472b6]">bounds.getHeight() * 0.15f</code>) rendered via bundled JetBrains Mono typeface.</li>
+                  <li><strong class="text-white">Custom PlayModeLookAndFeel:</strong> Thick, high-contrast, minimalist arc rendering with bold numerical feedback legible from 10 feet away.</li>
+                  <li><strong class="text-white">Proportional Drag Sensitivity:</strong> Tunes mouse velocity using <code class="text-[#f472b6]">juce::Slider::setMouseDragSensitivity()</code> so massive controls feel intuitive and precise under mouse drag.</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Flip Card Micro-Interaction Simulator -->
+            <div class="p-4 bg-[#140510] rounded-xl border border-[#9d174d] space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono-code">
+                <span class="text-[#f472b6] font-bold">🧪 Interactive Flip Card Simulator</span>
+                <span class="text-[#94a3b8]">Click the button below to test card morphing</span>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <button type="button" onclick="testFlipCard()" class="px-4 py-2 bg-[#be185d] hover:bg-[#db2777] text-white font-bold rounded-lg text-xs transition-colors shadow-lg">
+                  🔄 Simulate Alt+Click on CUTOFF
+                </button>
+                <span id="flip-card-status" class="text-xs font-mono-code text-[#cbd5e1]">Active View: <strong>[ Main Synthesis Parameters ]</strong></span>
+              </div>
+
+              <div id="flip-card-demo" class="p-4 bg-[#23091c] rounded-lg border border-[#be185d] flex items-center justify-around text-center text-xs">
+                <div class="space-y-1">
+                  <div class="text-[10px] text-[#94a3b8] uppercase font-mono-code">Knob 1</div>
+                  <div class="font-bold text-[#38bdf8]">CUTOFF</div>
+                  <div class="text-xs text-white font-mono-code">2,450 Hz</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-[10px] text-[#94a3b8] uppercase font-mono-code">Knob 2</div>
+                  <div class="font-bold text-[#c084fc]">RESONANCE</div>
+                  <div class="text-xs text-white font-mono-code">68 %</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-[10px] text-[#94a3b8] uppercase font-mono-code">Knob 3</div>
+                  <div class="font-bold text-[#fbbf24]">DRIVE</div>
+                  <div class="text-xs text-white font-mono-code">14 dB</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-[10px] text-[#94a3b8] uppercase font-mono-code">Knob 4</div>
+                  <div class="font-bold text-[#10b981]">ENV AMT</div>
+                  <div class="text-xs text-white font-mono-code">+42 %</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
-
-    <!-- ================= MODE 3: UI / UX DESIGN ================= -->
 
 <div class="mode-wrapper" id="ui-mode">
 <div class="sidebar">
@@ -2670,7 +2978,9 @@
       '2.1': { title: '45° Flow-Traced Signal Paths', verdict: null, note: '' },
       '2.2': { title: 'Teenage Engineering Vector Glyphs', verdict: null, note: '' },
       '3.1': { title: 'Vertical Arcade Rhythm Fader Strip', verdict: null, note: '' },
-      '3.2': { title: 'Tactile Magnetic Snap Detents', verdict: null, note: '' }
+      '3.2': { title: 'Tactile Magnetic Snap Detents', verdict: null, note: '' },
+      '4.1': { title: 'Persistent Modulator Dock Strip & Tracer Splines', verdict: null, note: '' },
+      '4.2': { title: 'Alt+Click Flip Cards & Giant Macro Play Mode', verdict: null, note: '' }
     };
 
     function switchMode(mode) {
@@ -2708,12 +3018,14 @@
       if (currentMode === 'workshop') {
         const contextMap = {
           '1.1': { mode: 'layouts', section: 'sec-monolithic' },
-          '1.2': { mode: 'layouts', section: 'sec-monolithic' },
-          '1.3': { mode: 'layouts', section: 'sec-monolithic' },
+          '1.2': { mode: 'layouts', section: 'sec-hybrid-banking' },
+          '1.3': { mode: 'layouts', section: 'sec-hybrid-banking' },
           '2.1': { mode: 'layouts', section: 'sec-traces' },
           '2.2': { mode: 'layouts', section: 'sec-glyphs' },
           '3.1': { mode: 'layouts', section: 'sec-faders' },
-          '3.2': { mode: 'layouts', section: 'sec-faders' }
+          '3.2': { mode: 'layouts', section: 'sec-faders' },
+          '4.1': { mode: 'layouts', section: 'sec-mod-dock' },
+          '4.2': { mode: 'layouts', section: 'sec-flip-cards' }
         };
         const target = contextMap[currentHeroId] || { mode: 'layouts', section: 'sec-monolithic' };
         goToContext(target.mode, target.section);
@@ -3096,6 +3408,36 @@
           hud.style.backgroundColor = '#1e1320';
           hud.style.color = '#cbd5e1';
         }
+      }
+    }
+
+    
+    function testFlipCard() {
+      const demo = document.getElementById('flip-card-demo');
+      const status = document.getElementById('flip-card-status');
+      if (!demo || !status) return;
+      if (demo.dataset.mode === 'mod') {
+        demo.dataset.mode = 'main';
+        status.innerHTML = 'Active View: <strong>[ Main Synthesis Parameters ]</strong>';
+        demo.innerHTML = `
+          <div class="space-y-1"><div class="text-[10px] text-[#94a3b8] uppercase font-mono-code">Knob 1</div><div class="font-bold text-[#38bdf8]">CUTOFF</div><div class="text-xs text-white font-mono-code">2,450 Hz</div></div>
+          <div class="space-y-1"><div class="text-[10px] text-[#94a3b8] uppercase font-mono-code">Knob 2</div><div class="font-bold text-[#c084fc]">RESONANCE</div><div class="text-xs text-white font-mono-code">68 %</div></div>
+          <div class="space-y-1"><div class="text-[10px] text-[#94a3b8] uppercase font-mono-code">Knob 3</div><div class="font-bold text-[#fbbf24]">DRIVE</div><div class="text-xs text-white font-mono-code">14 dB</div></div>
+          <div class="space-y-1"><div class="text-[10px] text-[#94a3b8] uppercase font-mono-code">Knob 4</div><div class="font-bold text-[#10b981]">ENV AMT</div><div class="text-xs text-white font-mono-code">+42 %</div></div>
+        `;
+        demo.style.borderColor = '#be185d';
+        demo.style.background = '#23091c';
+      } else {
+        demo.dataset.mode = 'mod';
+        status.innerHTML = 'Active View: <strong style="color: #67e8f9;">[ Modulation Injector for CUTOFF ]</strong>';
+        demo.innerHTML = `
+          <div class="space-y-1"><div class="text-[10px] text-[#22d3ee] uppercase font-mono-code">Mod Slot 1</div><div class="font-bold text-[#38bdf8]">LFO 1 AMT</div><div class="text-xs text-[#22d3ee] font-mono-code">+35 %</div></div>
+          <div class="space-y-1"><div class="text-[10px] text-[#22d3ee] uppercase font-mono-code">Mod Slot 2</div><div class="font-bold text-[#38bdf8]">ENV 2 AMT</div><div class="text-xs text-[#22d3ee] font-mono-code">-60 %</div></div>
+          <div class="space-y-1"><div class="text-[10px] text-[#c084fc] uppercase font-mono-code">Mod Slot 3</div><div class="font-bold text-[#c084fc]">RND 1 AMT</div><div class="text-xs text-[#c084fc] font-mono-code">+12 %</div></div>
+          <div class="space-y-1"><div class="text-[10px] text-[#f472b6] uppercase font-mono-code">Mod Slot 4</div><div class="font-bold text-[#f472b6]">MACRO 1</div><div class="text-xs text-[#f472b6] font-mono-code">+85 %</div></div>
+        `;
+        demo.style.borderColor = '#06b6d4';
+        demo.style.background = '#09212e';
       }
     }
 
