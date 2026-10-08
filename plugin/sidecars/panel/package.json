@@ -1,4 +1,6 @@
 {
-  "name": "antigravity-sidecar-panel",
+  "name": "nkai-panel",
+  "version": "1.0.0",
+  "description": "N'kai Sidecar UI Panel for Antigravity",
   "type": "module"
 }
