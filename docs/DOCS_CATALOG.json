@@ -1,9 +1,68 @@
 {
-  "catalog": {
-    "SYSTEM_MAP.md": "Architectural map (Standalone HTML Canvas <-> UI Extension Bundle <-> Sidecar Node SDK).",
-    "ARCHITECTURE.md": "Deep architectural dive into the Asymmetric Sidecar Split",
-    "API_REFERENCE.md": "Complete reference of schema.json, DOM events, and Web Worker communication contracts.",
-    "GLOSSARY.md": "Key terms (Hero Stage, Category Tabs, Context Scroll, FAB, Composer, Verdicts).",
-    "history/DEV_HISTORY.md": "Milestone journal"
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "title": "N'kai Documentation & Knowledge Catalog",
+  "description": "Master index and navigation manifest for N'kai Sidecar Framework architecture, APIs, and ecosystem links.",
+  "catalogs": {
+    "core_architecture": {
+      "description": "High-level architecture, terminology, and system mapping.",
+      "items": [
+        {
+          "path": "docs/SYSTEM_MAP.md",
+          "title": "N'kai System Map",
+          "purpose": "Component hierarchy across Standalone Canvas, UI Extension, and Node SDK."
+        },
+        {
+          "path": "docs/ARCHITECTURE.md",
+          "title": "N'kai Architecture Deep Dive",
+          "purpose": "The Asymmetric Sidecar Split, state machine, and CSS design tokens."
+        },
+        {
+          "path": "docs/API_REFERENCE.md",
+          "title": "N'kai API & Schema Reference",
+          "purpose": "Contracts for schema.json, DOM events, and Web Worker communication."
+        },
+        {
+          "path": "docs/GLOSSARY.md",
+          "title": "N'kai Terminology & Taxonomy",
+          "purpose": "Definitions of Hero Stage, Category Tabs, Context Scroll, FAB, and Composer."
+        }
+      ]
+    },
+    "history_and_milestones": {
+      "description": "Release journal and institutional memory.",
+      "items": [
+        {
+          "path": "docs/history/DEV_HISTORY.md",
+          "title": "N'kai Milestone Journal",
+          "purpose": "v1.0.0 initial release and ongoing development logs."
+        }
+      ]
+    },
+    "four_pillar_ecosystem": {
+      "description": "The Four Pillars of the Klang Ecosystem.",
+      "items": [
+        {
+          "path": "C:\\Dev\\TheKlangSuite",
+          "title": "The Klang Suite",
+          "purpose": "Polyphonic synthesizers and VST3 plugins."
+        },
+        {
+          "path": "C:\\Dev\\ToadTracker",
+          "title": "ToadTracker Hardware Groovebox",
+          "purpose": "16-step embedded hardware tracker."
+        },
+        {
+          "path": "C:\\Dev\\nkai",
+          "title": "N'kai Sidecar Framework",
+          "purpose": "Asymmetric sidecar framework & triage lab (https://github.com/codygratner/nkai)."
+        },
+        {
+          "path": "C:\\Dev\\Research",
+          "title": "The Klang Research Hub",
+          "purpose": "Centralized cross-project research repository, surveys, and soul harvests (https://github.com/codygratner/TheKlangResearch)."
+        }
+      ]
+    }
   }
 }
