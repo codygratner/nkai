@@ -88,12 +88,21 @@ class SidecarAuditor:
             if 'localStorage.getItem(\'nkai_audio_muted\')' not in self.content:
                 self.warnings.append("Audio Hygiene: Web Audio found without persistent localStorage mute state.")
 
+    def audit_navigation_and_scroll(self):
+        """Verifies that sidebar anchor navigation and scroll targets are robust."""
+        if 'sidebar-item' in self.content or 'nav-item' in self.content:
+            if 'scroll-margin-top' not in self.content:
+                self.warnings.append("Navigation Offset: CSS missing 'scroll-margin-top' on section targets. Sticky header may obscure scrolled content.")
+            if '.sidebar-item' in self.content and 'preventDefault' not in self.content:
+                self.issues.append("Navigation Trap: '.sidebar-item' click handler missing 'e.preventDefault()', which causes broken native hash jumps.")
+
     def run(self) -> bool:
         self.audit_tag_balance()
         self.audit_js_syntax_and_escapes()
         self.audit_overlay_pointer_events()
         self.audit_cache_busting_refresh()
         self.audit_audio_haptics()
+        self.audit_navigation_and_scroll()
 
         passed = (len(self.issues) == 0)
         return passed
