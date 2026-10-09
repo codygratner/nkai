@@ -96,6 +96,33 @@ class SidecarAuditor:
             if '.sidebar-item' in self.content and 'preventDefault' not in self.content:
                 self.issues.append("Navigation Trap: '.sidebar-item' click handler missing 'e.preventDefault()', which causes broken native hash jumps.")
 
+    def audit_chrome_runtime_console(self):
+        """Runs Chrome headless to detect runtime JS errors or SyntaxErrors."""
+        chrome_paths = [
+            Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe"),
+            Path(r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
+        ]
+        exe = next((p for p in chrome_paths if p.exists()), None)
+        if not exe:
+            return
+
+        import subprocess
+        try:
+            url = self.file_path.as_uri()
+            res = subprocess.run([
+                str(exe),
+                "--headless=new",
+                "--disable-gpu",
+                "--enable-logging=stderr",
+                "--dump-dom",
+                url
+            ], capture_output=True, text=True, errors="replace", timeout=10)
+            for line in res.stderr.splitlines():
+                if "CONSOLE" in line and ("error" in line.lower() or "syntaxerror" in line.lower() or "uncaught" in line.lower()):
+                    self.issues.append(f"Browser Runtime JS Error: {line.strip()}")
+        except Exception as e:
+            self.warnings.append(f"Headless Chrome Verification Skipped: {e}")
+
     def run(self) -> bool:
         self.audit_tag_balance()
         self.audit_js_syntax_and_escapes()
@@ -103,6 +130,7 @@ class SidecarAuditor:
         self.audit_cache_busting_refresh()
         self.audit_audio_haptics()
         self.audit_navigation_and_scroll()
+        self.audit_chrome_runtime_console()
 
         passed = (len(self.issues) == 0)
         return passed
